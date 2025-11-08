@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css2?family=Ultra');
+*, html{
+        margin: 0;
+        padding: 0;
+}
+body{
+    background-color: #25CED1;
+    font-family: "Open Sans", monospace, sans-serif;
+    color: rgba(12, 12, 12, .5);
+    width: 50%;
+    margin: 0 auto;
+}
+h1{
+    font-family: 'Ultra', serif;
+    font-size: 6em;
+    margin-top: 1em;
+    line-height: 1em;
+    margin-bottom: .5em;
+}
+h2{
+    margin-top: 50px;
+}
+p{
+    font-size: .7em;
+    max-width: 600px;
+/*    margin-top: 5em;*/
+    /*font-size: 11px;*/
+    margin-top: 0px;
+/*    color: darkslategray;*/
+}
+ul{
+    margin-bottom: 50px;
+}
+li{
+    font-size: 1.2em;
+    margin-top: .5em;
+}
+a{
+    color: azure;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/*BREAKPOINT 1!*/
+@media screen and (max-width: 435px) {
+    *, html, body{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 3em;
+        margin-top: 1em;
+    }
+}
+
+/*BREAKPOINT 2!*/
+@media screen and (max-width: 720px) {
+    *, html, body{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 4em;
+        margin-top: .75em;
+    }
+}
+
+/*BREAKPOINT 3!*/
+@media screen and (max-width: 900px) {
+    *, html, body{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 4em;
+        margin-top: .75em;
+    }
+}
+
+/*BREAKPOINT 4!*/
+@media screen and (max-width: 1367px) {
+    *, html, body{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 60%;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 5em;
+        margin-top: 1em;
+    }
+}
+
+/*BREAKPOINT! for smaller screens*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    *, html{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 80%;
+/*        max-width: 200px;*/
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 2em;
+        margin-top: 1em;
+    }
+}

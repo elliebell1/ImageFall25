@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textures - A-Frame School</title>
+    <meta name="description" content="Textures - A-Frame School">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Preload assets to ensure textures are available -->
+      <a-assets>
+        <img id="sky1" src="assets/sky1.jpg">
+        <img id="tex1" src="assets/texture1.jpg">
+        <img id="tex2" src="assets/texture2.jpg">
+        <img id="tex3" src="assets/texture3.jpg">
+        <img id="tex4" src="assets/texture4.jpg">
+        <img id="plane" src="assets/plane.jpg">
+      </a-assets>
+
+      <a-sky src="#sky1" radius="30"></a-sky>
+      
+      <a-box src="#tex1" position="-2 0.5 -4"></a-box>
+      <a-sphere src="#tex2" radius="0.5" position="0 0.5 -3"></a-sphere>
+      <a-cone src="#tex3" height="2" radius-top="0.1" position="0 1 -6"></a-cone>
+      <a-box src="#tex4" position="2 0.5 -4"></a-box>
+
+      <a-plane src="#plane" rotation="-90 0 0" height="100" width="100"></a-plane>
+
+      <a-light type="ambient" color="#666"></a-light>
+      <a-light type="point" intensity="1" position="2 4 4"></a-light>
+    </a-scene>
+  </body>
+</html>

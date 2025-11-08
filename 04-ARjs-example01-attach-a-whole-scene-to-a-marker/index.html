@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textures - A-Frame School</title>
+    <meta name="description" content="Textures - A-Frame School">
+    
+    <!-- STEP ONE CHANGE VERSION FROM 0.5.0 TO 0.6.0 -->
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    
+    <!--  STEP TWO: ADD THE SCRIPT  -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  
+  </head>
+  <body>
+    <!-- STEP 3 ADD THE "EMBEDDED ARJS" TO THE OPENING SCENE TAG: -->
+    <a-scene embedded arjs>     
+      
+      <a-assets>
+        <img id="waffle" src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fcone.jpg?1490308535937">
+        <a-asset-item id="tree1" src="https://cdn.glitch.com/49a33808-77f5-4832-84c9-31da8ba40385%2FLowpoly_tree_sample.obj?1524765024389"></a-asset-item>
+        <a-asset-item id="tree2" src="https://cdn.glitch.com/49a33808-77f5-4832-84c9-31da8ba40385%2FLowpoly_tree_sample.obj?1524765024389"></a-asset-item>
+      </a-assets>
+      
+      <!--  REMOVE OR COMMENT OUT THE SKY: -->
+      <!--  <a-sky src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fsechelt.jpg?1490307995926"></a-sky> -->
+
+      <a-box src="" position="1 0 1"></a-box>
+      <a-sphere src="" radius="0.5" position="0 0.5 -1"></a-sphere>
+      <a-cone src="#waffle" height="3" radius-top="0.1" position="0.5 1 -2" scale=".5 .5 .5"></a-cone>
+      <a-box src="" position="-1 0.5 -1.5"></a-box>
+
+      <a-obj-model src="#tree1" color="#00FF00" scale="0.05 0.05 0.05" position="0 0 0"></a-obj-model>
+      <a-obj-model src="#tree2" color="#00FF00" scale="0.05 0.05 0.05" position="-1 0 2"></a-obj-model>
+      
+      <a-plane src="" rotation="-90 0 0" height="5" width="5"></a-plane>
+
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="point" intensity="1" position="2 4 4"></a-light>
+      
+      <!--  ADD A CAMERA AND CONNECT IT TO THE "HIRO" MARKER + CHANGE THE QUOTATION FROM SINGLE TO DOUBLE QUOTES  -->
+      <a-marker-camera preset="hiro"></a-marker-camera>
+    
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textures - A-Frame School</title>
+    <meta name="description" content="Textures - A-Frame School">
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+<!--     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="tree" src="assets/Lowpoly_tree_sample.obj"></a-asset-item>
+        <img id="sky1" src="assets/SheivaRezvani-Equirectangular-Unreal.jpg">
+        <img id="tex5" src="assets/texture5.jpg">
+        <img id="tex3" src="assets/texture3.jpg">
+        <img id="tex1" src="assets/texture1.jpg">
+      </a-assets>
+      
+      <a-sky src="#sky1"></a-sky>
+      
+      <a-text value="Beautiful Family Tree!!" position="0 10 -4" wrap-count="10" width="30" font="roboto" color="#FFFFFF"></a-text>
+      
+      <a-obj-model src="#tree" position="-9.081 0 -10" scale=".25 .25 .25" color="green"></a-obj-model>
+      
+      <a-obj-model src="#tree" position="-5 0 -20" scale=".5 .5 .5" material="shader:flat;src:#tex5"></a-obj-model>
+      <a-box src="" position="-2 0.5 -4"></a-box>
+      <a-sphere src="" radius="0.5" position="0 0.5 -3"></a-sphere>
+      <a-cone src="#tex3" height="2" radius-top="0.1" position="0 1 -6"></a-cone>
+      <a-box src="#tex5" position="2 0.5 -4"></a-box>
+
+      <a-plane src="#tex1" rotation="-90 0 0" height="100" width="100"></a-plane>
+
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light light="color: #ff6000; intensity: 2; type: point"></a-light>
+      
+      
+<!--       <a-entity id="rig" position="25 10 0">
+          <a-entity id="camera" camera look-controls></a-entity>
+      </a-entity> -->
+      
+<!--       <a-entity camera="active: true" look-controls wasd-controls position="0 10 0" data-aframe-default-camera></a-entity> -->
+    
+    </a-scene>
+  </body>
+</html>
