@@ -5,11 +5,23 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <img id="sky" src="assets/pastel_beach.jpg" alt="">
+        <img id="stripes" src="assets/stripes.jpg" alt="">
+        <img id="wood" src="assets/wood.jpg" alt="">
+        <img id="checks" src="assets/checks.jpg" alt="">
+        <img id="beachball" src="assets/BeachBallTexture3.png" alt="">
+        <img id="woven" src="assets/woven.jpeg" alt="">
+        <img id="ribbon" src="assets/ribbon.jpeg" alt="">
+      </a-assets>
+          <a-cylinder src="#wood" position="-1.7 1 1" radius="0.015" color="#FFFFFF" height="1"></a-cylinder> 
+          <a-cone src="#stripes" position="-1.7 1.5 1" rotation="0 0 0" color="#FFFFFF" radius-bottom=".55" radius-top="0.01" height="0.3"></a-cone>
+          <a-plane src="#checks" position="-2 0.5 0.5" rotation="-90 0 0" width="1" height=".5" color="#FFFFFF"></a-plane>
+          <a-sphere src="#beachball" position="-2 1 -4" radius=".25" color="#F5FBFF"></a-sphere>
+          <a-cylinder src="#woven" position="-2 0.51 0.3" radius="0.15" color="" height=".01"></a-cylinder> 
+          <a-cylinder src="#woven" position="-2 0.56 0.3" radius="0.1" color="" height=".05"></a-cylinder> 
+          <a-cylinder src="#ribbon" position="-2 0.55 0.3" radius="0.11" color="#FFFFFF" height=".02"></a-cylinder> 
+      <a-sky src="#sky"></a-sky>
     </a-scene>
   </body>
 </html>
