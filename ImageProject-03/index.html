@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+
   </head>
   <body>
     <a-scene>
@@ -11,9 +12,21 @@
         <a-asset-item id="pine-tree-snow-1-mtl" src="assets/PineTree_Snow_1.mtl"></a-asset-item>
         <a-asset-item id="pine-tree-snow-2-obj" src="assets/PineTree_Snow_2.obj"></a-asset-item>
         <a-asset-item id="pine-tree-snow-2-mtl" src="assets/PineTree_Snow_2.mtl"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-5-obj" src="assets/PineTree_Snow_5.obj"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-5-mtl" src="assets/PineTree_Snow_5.mtl"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-3-obj" src="assets/CommonTree_Dead_Snow_3.obj"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-3-mtl" src="assets/CommonTree_Dead_Snow_3.mtl"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-2-obj" src="assets/BirchTree_Dead_Snow_2.obj"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-2-mtl" src="assets/BirchTree_Dead_Snow_2.mtl"></a-asset-item>
 
         <a-asset-item id="wood-log-snow-obj" src="assets/WoodLog_Snow.obj"></a-asset-item>
         <a-asset-item id="wood-log-snow-mtl" src="assets/WoodLog_Snow.mtl"></a-asset-item>
+        <a-asset-item id="tree-stump-snow-obj" src="assets/TreeStump_Snow.obj"></a-asset-item>
+        <a-asset-item id="tree-stump-snow-mtl" src="assets/TreeStump_Snow.mtl"></a-asset-item>
+        <a-asset-item id="mushroom-gltf" src="assets/Mushroom.glb"></a-asset-item>
+
+        <a-asset-item id="snow-pile-obj" src="assets/xmas/snow-pile.obj"></a-asset-item>
+        <a-asset-item id="snow-pile-mtl" src="assets/xmas/snow-pile.mtl"></a-asset-item>
 
         <a-asset-item id="campfire-stones-obj" src="assets/campfire_stones.obj"></a-asset-item>
         <a-asset-item id="campfire-stones-mtl" src="assets/campfire_stones.mtl"></a-asset-item>
@@ -30,34 +43,86 @@
         <a-asset-item id="sled-obj" src="assets/xmas/sled.obj"></a-asset-item>
         <a-asset-item id="sled-mtl" src="assets/xmas/sled.mtl"></a-asset-item>
 
-        <a-asset-item id="lights-gltf" src="assets/lights/scene.gltf"></a-asset-item>
+        <a-asset-item id="lights-gltf" src="assets/simple_string_lights.glb"></a-asset-item>
+        <a-asset-item id="candle-triple-obj" src="assets/candle_triple.obj"></a-asset-item>
+        <a-asset-item id="candle-triple-mtl" src="assets/candle_triple.mtl"></a-asset-item>
+        <a-asset-item id="candle-thin-lit-obj" src="assets/candle_thin_lit.obj"></a-asset-item>
+        <a-asset-item id="candle-thin-lit-mtl" src="assets/candle_thin_lit.mtl"></a-asset-item>
+        <a-asset-item id="candle-lit-obj" src="assets/candle_lit.obj"></a-asset-item>
+        <a-asset-item id="candle-lit-mtl" src="assets/candle_lit.mtl"></a-asset-item>
+
+        <a-asset-item id="tent-small-open-gltf" src="assets/tent_smallOpen.glb"></a-asset-item>
+        <a-asset-item id="bed-floor-obj" src="assets/bed_floor.obj"></a-asset-item>
+        <a-asset-item id="bed-floor-mtl" src="assets/bed_floor.mtl"></a-asset-item>
+
+        <a-asset-item id="deer-gltf" src="assets/Deer.glb"></a-asset-item>
       </a-assets>
+
+
 
       <a-box width="200" depth="200" density="40" opacity="1" position="1 -0.4 0" color = "#c6c1e3" shadow="receive: true"></a-box>    
       <a-sky src="#sky" position="0 0 0"></a-sky> 
 
       <a-obj-model src="#pine-tree-snow-1-obj" mtl="#pine-tree-snow-1-mtl" position="-4 0 -6" scale="1.75 1.75 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
       <a-obj-model src="#pine-tree-snow-2-obj" mtl="#pine-tree-snow-2-mtl" position="3 0 -9" scale="1.75 1.75 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#pine-tree-snow-5-obj" mtl="#pine-tree-snow-5-mtl" position="3.25 0 -1.75" scale="1.75 1.75 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#common-tree-dead-snow-3-obj" mtl="#common-tree-dead-snow-3-mtl" position="-2.7 0 -2.6" scale="1.75 1.75 1.75" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#birch-tree-dead-snow-2-obj" mtl="#birch-tree-dead-snow-2-mtl" position="-3 0 -8" scale="1.75 2 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
 
       <a-obj-model src="#wood-log-snow-obj" mtl="#wood-log-snow-mtl" position="-1.5 0.1 -3.2" scale="1 1 1" rotation="0 50 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#tree-stump-snow-obj" mtl="#tree-stump-snow-mtl" position="2 0 -4.3" scale="1 1 1" rotation="0 240 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#snow-pile-obj"  material="color: #d3ceed" position="2 0 -8" scale="3 3 3" rotation="0 0 0" shadow="receive: true"></a-obj-model>
+      <a-obj-model src="#snow-pile-obj"  material="color: #d3ceed" position="3.25 0 -1.75" scale="3 3 3" rotation="0 180 0" shadow="receive: true"></a-obj-model>
+      <a-gltf-model src="#mushroom-gltf" position="2.5 0.05 -4" scale="0.025 0.025 0.025" rotation="0 0 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#mushroom-gltf" position="-3.25 0.05 -5.5" scale="0.05 0.05 0.05" rotation="0 180 0" shadow="cast: true"></a-gltf-model>
 
       <a-obj-model src="#campfire-stones-obj" material="color: #707070" position="0 0 -5" scale="5 5 5" rotation="0 0 0"></a-obj-model>
       <a-obj-model src="#campfire-logs-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="5 5 5" rotation="0 20 0"></a-obj-model>
       <a-obj-model src="#campfire-fishing-stand-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="6.5 6.5 6.5" rotation="0 0 0" shadow="cast: true"></a-obj-model>
       <a-obj-model src="#bucket-obj" mtl="#bucket-mtl" position="-0.1 0.445 -4.9" scale="5 5 5" rotation="0 0 0"></a-obj-model>
+
+      <a-gltf-model src="#tent-small-open-gltf" position="5 0 -6" scale="5 5 5" rotation="0 135 0"></a-gltf-model>
+      <a-obj-model src="#candle-thin-lit-obj"  mtl="#candle-thin-lit-mtl" position="5 0 -7" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#candle-lit-obj"  mtl="#candle-lit-mtl" position="4 0 -4" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#bed-floor-obj"  mtl="#bed-floor-mtl" position="5 0.1 -6" scale="3 3 3" rotation="0 315 0"></a-obj-model>
+
+
+
+      <!-- <a-gltf-model src="#deer-gltf" position="-3.25 0.05 -5.5" scale="0.5 0.5 0.5" rotation="0 0 0" shadow="cast: true"></a-gltf-model> -->
+
       <!-- <a-obj-model src="#sled-obj" mtl="#sled-mtl" position="4 0.1 -5" scale="2 2 2" rotation="0 45 0" shadow="cast: true"></a-obj-model> -->
 
-      <!-- <a-gltf-model src="#lights-gltf" position="-3 1 -4" scale="4 4 4" rotation="0 0 0" shadow="cast: true"></a-gltf-model>
-       -->
+      <a-entity id="lights"
+            gltf-model="#lights-gltf"
+            emissive-bulbs="color: #fa00af"
+            position="0 4.3 -5.75" scale="1 1 1" rotation="0 45 0">
+      </a-entity>
+
+      <a-entity id="lights2"
+            gltf-model="#lights-gltf"
+            emissive-bulbs="color: #f5c725"
+            position="-0.25 4 -3.75" scale="1 1 1" rotation="0 150 0">
+      </a-entity>
+      
       <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
           position="0 .5 -5"
           animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
-        </a-entity>
+      </a-entity>
+
+      <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
+          position="4 0.925 -4"
+          animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
+      </a-entity>
+
+      <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
+          position="4.996 1 -7"
+          animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
+      </a-entity>
 
     <a-entity
         light="type: directional; 
               color: #ccdfff; 
-              intensity: 1.2; 
+              intensity: 2; 
               castShadow: true;
               shadowCameraLeft: -50;
               shadowCameraRight: 50;
@@ -66,10 +131,45 @@
               shadowMapWidth: 2048;
               shadowMapHeight: 2048;"
         position="4 10 5"
-        rotation="-60 45 0">
+        rotation="-60 45 0"
+        scale="5 5 5">
     </a-entity>
+
     <a-entity light="type: hemisphere; skyColor: #151b36; groundColor: #867596; intensity: 0.3"></a-entity>
-    <a-entity light="type: ambient; color: #efb5ff; intensity: 0.8"></a-entity>
+    <a-entity light="type: ambient; color: #efb5ff; intensity: 1"></a-entity>
     </a-scene>
+
+    <script>
+      AFRAME.registerComponent('emissive-bulbs', {
+        schema: {
+          color: { type: 'color', default: '#FFD45A' }, // default bulb color
+          intensity: { type: 'number', default: 3.0 }   // emissive intensity
+        },
+
+        init() {
+          this.el.addEventListener('model-loaded', () => {
+            const mesh = this.el.getObject3D('mesh');
+            mesh.traverse(node => {
+              if (!node.isMesh || !node.material) return;
+
+              const name = node.material.name;
+
+              // Only target bulb materials
+              if (name === "Light" || name === "Light_Tip") {
+                // Clone material so other instances aren't affected
+                node.material = node.material.clone();
+
+                // Set the emissive color to your chosen color
+                node.material.emissive = new THREE.Color(this.data.color);
+                node.material.emissiveIntensity = this.data.intensity;
+                node.material.needsUpdate = true;
+              }
+            });
+          });
+        }
+      });
+      
+    </script>
+
   </body>
 </html>
