@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
-
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-particle-system-component@1.2.0/dist/aframe-particle-system-component.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene fog="type: exponential; color: #1f222b; density: 0.02;">
        <a-assets>
         <img id="sky" src="assets/AdobeStock_286725174 copy.jpg" alt="">
         <a-asset-item id="pine-tree-snow-1-obj" src="assets/PineTree_Snow_1.obj"></a-asset-item>
         <a-asset-item id="pine-tree-snow-1-mtl" src="assets/PineTree_Snow_1.mtl"></a-asset-item>
         <a-asset-item id="pine-tree-snow-2-obj" src="assets/PineTree_Snow_2.obj"></a-asset-item>
         <a-asset-item id="pine-tree-snow-2-mtl" src="assets/PineTree_Snow_2.mtl"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-3-obj" src="assets/PineTree_Snow_3.obj"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-3-mtl" src="assets/PineTree_Snow_3.mtl"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-4-obj" src="assets/PineTree_Snow_4.obj"></a-asset-item>
+        <a-asset-item id="pine-tree-snow-4-mtl" src="assets/PineTree_Snow_4.mtl"></a-asset-item>
         <a-asset-item id="pine-tree-snow-5-obj" src="assets/PineTree_Snow_5.obj"></a-asset-item>
         <a-asset-item id="pine-tree-snow-5-mtl" src="assets/PineTree_Snow_5.mtl"></a-asset-item>
+        
+        <a-asset-item id="common-tree-dead-snow-1-obj" src="assets/CommonTree_Dead_Snow_1.obj"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-1-mtl" src="assets/CommonTree_Dead_Snow_1.mtl"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-2-obj" src="assets/CommonTree_Dead_Snow_2.obj"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-2-mtl" src="assets/CommonTree_Dead_Snow_2.mtl"></a-asset-item>
         <a-asset-item id="common-tree-dead-snow-3-obj" src="assets/CommonTree_Dead_Snow_3.obj"></a-asset-item>
         <a-asset-item id="common-tree-dead-snow-3-mtl" src="assets/CommonTree_Dead_Snow_3.mtl"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-4-obj" src="assets/CommonTree_Dead_Snow_4.obj"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-4-mtl" src="assets/CommonTree_Dead_Snow_4.mtl"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-5-obj" src="assets/CommonTree_Dead_Snow_5.obj"></a-asset-item>
+        <a-asset-item id="common-tree-dead-snow-5-mtl" src="assets/CommonTree_Dead_Snow_5.mtl"></a-asset-item>
+
+        <a-asset-item id="birch-tree-dead-snow-1-obj" src="assets/BirchTree_Dead_Snow_1.obj"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-1-mtl" src="assets/BirchTree_Dead_Snow_1.mtl"></a-asset-item>
         <a-asset-item id="birch-tree-dead-snow-2-obj" src="assets/BirchTree_Dead_Snow_2.obj"></a-asset-item>
         <a-asset-item id="birch-tree-dead-snow-2-mtl" src="assets/BirchTree_Dead_Snow_2.mtl"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-3-obj" src="assets/BirchTree_Dead_Snow_3.obj"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-3-mtl" src="assets/BirchTree_Dead_Snow_3.mtl"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-4-obj" src="assets/BirchTree_Dead_Snow_4.obj"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-4-mtl" src="assets/BirchTree_Dead_Snow_4.mtl"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-5-obj" src="assets/BirchTree_Dead_Snow_5.obj"></a-asset-item>
+        <a-asset-item id="birch-tree-dead-snow-5-mtl" src="assets/BirchTree_Dead_Snow_5.mtl"></a-asset-item>
+    
+        <a-asset-item id="rock-snow-1-obj" src="assets/Rock_Snow_1.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-1-mtl" src="assets/Rock_Snow_1.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-2-obj" src="assets/Rock_Snow_2.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-2-mtl" src="assets/Rock_Snow_2.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-3-obj" src="assets/Rock_Snow_3.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-3-mtl" src="assets/Rock_Snow_3.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-4-obj" src="assets/Rock_Snow_4.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-4-mtl" src="assets/Rock_Snow_4.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-5-obj" src="assets/Rock_Snow_5.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-5-mtl" src="assets/Rock_Snow_5.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-6-obj" src="assets/Rock_Snow_6.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-6-mtl" src="assets/Rock_Snow_6.mtl"></a-asset-item>
+        <a-asset-item id="rock-snow-7-obj" src="assets/Rock_Snow_7.obj"></a-asset-item>
+        <a-asset-item id="rock-snow-7-mtl" src="assets/Rock_Snow_7.mtl"></a-asset-item>
 
         <a-asset-item id="wood-log-snow-obj" src="assets/WoodLog_Snow.obj"></a-asset-item>
         <a-asset-item id="wood-log-snow-mtl" src="assets/WoodLog_Snow.mtl"></a-asset-item>
         <a-asset-item id="tree-stump-snow-obj" src="assets/TreeStump_Snow.obj"></a-asset-item>
         <a-asset-item id="tree-stump-snow-mtl" src="assets/TreeStump_Snow.mtl"></a-asset-item>
-        <a-asset-item id="mushroom-gltf" src="assets/Mushroom.glb"></a-asset-item>
+
+        <a-asset-item id="mushroom-glb" src="assets/Mushroom.glb"></a-asset-item>
 
         <a-asset-item id="snow-pile-obj" src="assets/xmas/snow-pile.obj"></a-asset-item>
-        <a-asset-item id="snow-pile-mtl" src="assets/xmas/snow-pile.mtl"></a-asset-item>
+        <a-asset-item id="snow-bunker-obj" src="assets/xmas/snow-bunker.obj"></a-asset-item>
+        <a-asset-item id="snow-flat-obj" src="assets/xmas/snow-flat.obj"></a-asset-item>
+        <a-asset-item id="snow-flat-large-obj" src="assets/xmas/snow-flat-large.obj"></a-asset-item>
 
-        <a-asset-item id="campfire-stones-obj" src="assets/campfire_stones.obj"></a-asset-item>
-        <a-asset-item id="campfire-stones-mtl" src="assets/campfire_stones.mtl"></a-asset-item>
+        <a-asset-item id="bonfire-glb" src="assets/Bonfire.glb"></a-asset-item>
 
-        <a-asset-item id="campfire-logs-obj" src="assets/campfire_logs.obj"></a-asset-item>
-        <a-asset-item id="campfire-logs-mtl" src="assets/campfire_logs.mtl"></a-asset-item>
-
-        <a-asset-item id="campfire-fishing-stand-obj" src="assets/campfire-fishing-stand.obj"></a-asset-item>
-        <a-asset-item id="campfire-fishing-stand-mtl" src="assets/campfire-fishing-stand.mtl"></a-asset-item>
-
-        <a-asset-item id="bucket-obj" src="assets/survival/bucket.obj"></a-asset-item>
-        <a-asset-item id="bucket-mtl" src="assets/survival/bucket.mtl"></a-asset-item>
-
-        <a-asset-item id="sled-obj" src="assets/xmas/sled.obj"></a-asset-item>
-        <a-asset-item id="sled-mtl" src="assets/xmas/sled.mtl"></a-asset-item>
-
-        <a-asset-item id="lights-gltf" src="assets/simple_string_lights.glb"></a-asset-item>
+        <a-asset-item id="lights-glb" src="assets/simple_string_lights.glb"></a-asset-item>
         <a-asset-item id="candle-triple-obj" src="assets/candle_triple.obj"></a-asset-item>
         <a-asset-item id="candle-triple-mtl" src="assets/candle_triple.mtl"></a-asset-item>
         <a-asset-item id="candle-thin-lit-obj" src="assets/candle_thin_lit.obj"></a-asset-item>
@@ -51,17 +78,39 @@
         <a-asset-item id="candle-lit-obj" src="assets/candle_lit.obj"></a-asset-item>
         <a-asset-item id="candle-lit-mtl" src="assets/candle_lit.mtl"></a-asset-item>
 
-        <a-asset-item id="tent-small-open-gltf" src="assets/tent_smallOpen.glb"></a-asset-item>
+        <a-asset-item id="tent-small-open-glb" src="assets/tent_smallOpen.glb"></a-asset-item>
+        <a-asset-item id="hut-glb" src="assets/Hut.glb"></a-asset-item>
         <a-asset-item id="bed-floor-obj" src="assets/bed_floor.obj"></a-asset-item>
         <a-asset-item id="bed-floor-mtl" src="assets/bed_floor.mtl"></a-asset-item>
+        <a-asset-item id="bed-obj" src="assets/fantasy/Bed_Twin2.obj"></a-asset-item>
+        <a-asset-item id="bed-mtl" src="assets/fantasy/Bed_Twin2.mtl"></a-asset-item>
+        <img id="rug-pattern" src="assets/AdobeStock_252209114.jpeg">
 
-        <a-asset-item id="deer-gltf" src="assets/Deer.glb"></a-asset-item>
+        <a-asset-item id="table-long-tablecloth-obj" src="assets/table_long_tablecloth.obj"></a-asset-item>
+        <a-asset-item id="table-long-tablecloth-mtl" src="assets/table_long_tablecloth.mtl"></a-asset-item>
+        <a-asset-item id="pie-apple-glb" src="assets/Pie Apple.glb"></a-asset-item>
+        <a-asset-item id="plate-deep-glb" src="assets/foods/plate-deep.glb"></a-asset-item>
+        <a-asset-item id="plate-glb" src="assets/foods/plate.glb"></a-asset-item>
+        <a-asset-item id="pan-stew-glb" src="assets/foods/pan-stew.glb"></a-asset-item>
+        <a-asset-item id="wine-white-glb" src="assets/foods/wine-white.glb"></a-asset-item>
+        <a-asset-item id="cake-glb" src="assets/foods/cake.glb"></a-asset-item>
+        <a-asset-item id="pear-glb" src="assets/foods/pear.glb"></a-asset-item>
+        <a-asset-item id="orange-glb" src="assets/foods/orange.glb"></a-asset-item>
+        <a-asset-item id="cheese-glb" src="assets/foods/cheese.glb"></a-asset-item>
+        <a-asset-item id="pumpkin-glb" src="assets/foods/pumpkin-basic.glb"></a-asset-item>
+
+        <a-asset-item id="mouse-glb" src="assets/Mouse.glb"></a-asset-item>
+        <a-asset-item id="squirrel-glb" src="assets/Squirrel.glb"></a-asset-item>
+        <a-asset-item id="hedgehog-glb" src="assets/Hedgehog.glb"></a-asset-item>
+        <a-asset-item id="fox-glb" src="assets/Fox.glb"></a-asset-item>
+        <a-asset-item id="buck-glb" src="assets/Mule deer.glb"></a-asset-item>
+        <a-asset-item id="doe-glb" src="assets/Mule Deer 2.glb"></a-asset-item>
+        <a-asset-item id="bear-glb" src="assets/Black bear.glb"></a-asset-item>
+
       </a-assets>
 
-
-
-      <a-box width="200" depth="200" density="40" opacity="1" position="1 -0.4 0" color = "#c6c1e3" shadow="receive: true"></a-box>    
-      <a-sky src="#sky" position="0 0 0"></a-sky> 
+      <a-box width="200" depth="200" opacity="1" position="1 -0.4 0" color = "#c6c1e3" shadow="receive: true"></a-box>    
+      <a-sky src="#sky" position="0 0 0" material="fog: false"></a-sky> 
 
       <a-obj-model src="#pine-tree-snow-1-obj" mtl="#pine-tree-snow-1-mtl" position="-4 0 -6" scale="1.75 1.75 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
       <a-obj-model src="#pine-tree-snow-2-obj" mtl="#pine-tree-snow-2-mtl" position="3 0 -9" scale="1.75 1.75 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
@@ -69,39 +118,72 @@
       <a-obj-model src="#common-tree-dead-snow-3-obj" mtl="#common-tree-dead-snow-3-mtl" position="-2.7 0 -2.6" scale="1.75 1.75 1.75" rotation="0 0 0" shadow="cast: true"></a-obj-model>
       <a-obj-model src="#birch-tree-dead-snow-2-obj" mtl="#birch-tree-dead-snow-2-mtl" position="-3 0 -8" scale="1.75 2 1.75" rotation="0 120 0" shadow="cast: true"></a-obj-model>
 
-      <a-obj-model src="#wood-log-snow-obj" mtl="#wood-log-snow-mtl" position="-1.5 0.1 -3.2" scale="1 1 1" rotation="0 50 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#wood-log-snow-obj" mtl="#wood-log-snow-mtl" position="-1.5 0.1 -3.2" scale="1 1 1" rotation="0 50 0" shadow="cast: true; receive: true;"></a-obj-model>
+      <a-gltf-model src="#mouse-glb" position="-1.5 0.58 -3.2" scale="0.2 0.2 0.2" rotation="0 140 0" shadow="cast: true"></a-gltf-model>
       <a-obj-model src="#tree-stump-snow-obj" mtl="#tree-stump-snow-mtl" position="2 0 -4.3" scale="1 1 1" rotation="0 240 0" shadow="cast: true"></a-obj-model>
+      <a-gltf-model src="#hedgehog-glb" position="2 0.58 -4.3" scale="0.005 0.005 0.005" rotation="0 270 0" shadow="cast: true"></a-gltf-model>
       <a-obj-model src="#snow-pile-obj"  material="color: #d3ceed" position="2 0 -8" scale="3 3 3" rotation="0 0 0" shadow="receive: true"></a-obj-model>
       <a-obj-model src="#snow-pile-obj"  material="color: #d3ceed" position="3.25 0 -1.75" scale="3 3 3" rotation="0 180 0" shadow="receive: true"></a-obj-model>
-      <a-gltf-model src="#mushroom-gltf" position="2.5 0.05 -4" scale="0.025 0.025 0.025" rotation="0 0 0" shadow="cast: true"></a-gltf-model>
-      <a-gltf-model src="#mushroom-gltf" position="-3.25 0.05 -5.5" scale="0.05 0.05 0.05" rotation="0 180 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#mushroom-glb" position="2.5 0.05 -4" scale="0.025 0.025 0.025" rotation="0 0 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#mushroom-glb" position="-3.25 0.05 -5.5" scale="0.05 0.05 0.05" rotation="0 180 0" shadow="cast: true"></a-gltf-model>
 
-      <a-obj-model src="#campfire-stones-obj" material="color: #707070" position="0 0 -5" scale="5 5 5" rotation="0 0 0"></a-obj-model>
-      <a-obj-model src="#campfire-logs-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="5 5 5" rotation="0 20 0"></a-obj-model>
-      <a-obj-model src="#campfire-fishing-stand-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="6.5 6.5 6.5" rotation="0 0 0" shadow="cast: true"></a-obj-model>
-      <a-obj-model src="#bucket-obj" mtl="#bucket-mtl" position="-0.1 0.445 -4.9" scale="5 5 5" rotation="0 0 0"></a-obj-model>
+      <a-gltf-model src="#bonfire-glb" position="0 0.2 -5" scale="6.5 6.5 6.5" rotation="0 0 0"></a-gltf-model>
+      <!-- <a-obj-model src="#campfire-stones-obj" material="color: #707070" position="0 0 -5" scale="5 5 5" rotation="0 0 0"></a-obj-model>
+      <a-obj-model src="#campfire-logs-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="5 5 5" rotation="0 20 0"></a-obj-model> -->
+      <!-- <a-obj-model src="#campfire-fishing-stand-obj" material="color: #57380f" position="-0.1 0 -4.9" scale="6.5 6.5 6.5" rotation="0 0 0" shadow="cast: true"></a-obj-model> -->
+      <!-- <a-obj-model src="#bucket-obj" mtl="#bucket-mtl" position="-0.1 0.445 -4.9" scale="5 5 5" rotation="0 0 0"></a-obj-model> -->
 
-      <a-gltf-model src="#tent-small-open-gltf" position="5 0 -6" scale="5 5 5" rotation="0 135 0"></a-gltf-model>
-      <a-obj-model src="#candle-thin-lit-obj"  mtl="#candle-thin-lit-mtl" position="5 0 -7" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-gltf-model src="#tent-small-open-glb" position="5 0 -6" scale="5 5 5" rotation="0 135 0"></a-gltf-model>
+      <a-plane color="#7D608F" height="3" width="2.7" rotation="-90 135 0" position="5 0.11 -6"></a-plane>
+      <a-gltf-model src="#squirrel-glb" position="4.8 0.5 -5.5" scale="0.01 0.01 0.01" rotation="0 300 0"></a-gltf-model>
+      <!-- <a-obj-model src="#candle-thin-lit-obj"  mtl="#candle-thin-lit-mtl" position="5 0 -7" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model> -->
       <a-obj-model src="#candle-lit-obj"  mtl="#candle-lit-mtl" position="4 0 -4" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model>
       <a-obj-model src="#bed-floor-obj"  mtl="#bed-floor-mtl" position="5 0.1 -6" scale="3 3 3" rotation="0 315 0"></a-obj-model>
 
+      <a-obj-model src="#table-long-tablecloth-obj"  mtl="#table-long-tablecloth-mtl" position="-0.75 0 -9.5" scale="1 1 1" rotation="0 87 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#candle-thin-lit-obj"  mtl="#candle-thin-lit-mtl" position="-2.2 1 -10.2" scale="1 1 1" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#candle-thin-lit-obj"  mtl="#candle-thin-lit-mtl" position="-2 1 -10" scale="0.75 0.75 0.75" rotation="0 0 0" shadow="cast: true"></a-obj-model>
+      <a-gltf-model src="#pie-apple-glb" position="-1 1.1 -9.2" scale="0.75 0.75 0.75" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#plate-deep-glb" position="-1 1 -9.2" scale="1.1 1.1 1.1" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#pan-stew-glb" position="0 1 -9.7" scale="1.5 1.5 1.5" rotation="0 80 0"></a-gltf-model>
+      <a-gltf-model src="#wine-white-glb" position="-.8 1 -9.9" scale="1.5 1.5 1.5" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#cake-glb" position="0.7 1 -9" scale="1.25 1.25 1.25" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#pear-glb" position="-0.1 1 -9" scale="1.5 1.5 1.5" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#orange-glb" position="-0.3 1 -9.2" scale="1.5 1.5 1.5" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#cheese-glb" position="-2.2 1 -8.8" scale="1 1 1" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#pumpkin-glb" position="-1.8 1 -9.6" scale="2 2 2" rotation="0 100 0"></a-gltf-model>
 
+      <a-gltf-model src="#hut-glb" position="0 0 3" scale="7 7 7" rotation="0 0 0" shadow="cast: true; receive: true;"></a-gltf-model>
+      <a-box src="#rug-pattern" width="0.01" depth="3" height="3" opacity="1" position="0.1 0.6 3.2" rotation="0 10 90" color = "#c6c1e3" shadow="receive: true"></a-box>
+      <a-obj-model src="#candle-lit-obj"  mtl="#candle-lit-mtl" position="1.5 0.5 3.75" scale="1 1 1" rotation="0 0 0"></a-obj-model> 
+      <a-obj-model src="#bed-obj"  mtl="#bed-mtl" position="-.8 0.5 3.75" scale="1 1 1" rotation="0 170 0"></a-obj-model> 
+      <a-obj-model src="#common-tree-dead-snow-1-obj" mtl="#common-tree-dead-snow-1-mtl" position="5 0 2.5" scale="2 2 2" rotation="0 45 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#pine-tree-snow-3-obj" mtl="#pine-tree-snow-3-mtl" position="-4.75 0 4" scale="2 2 2" rotation="0 180 0" shadow="cast: true"></a-obj-model>
+      <a-obj-model src="#snow-bunker-obj" material="color: #d3ceed" position="0 0 1.5" scale="3 2 3" rotation="0 180 0" shadow="cast: true"></a-obj-model>
 
-      <!-- <a-gltf-model src="#deer-gltf" position="-3.25 0.05 -5.5" scale="0.5 0.5 0.5" rotation="0 0 0" shadow="cast: true"></a-gltf-model> -->
+      <a-gltf-model src="#fox-glb" position="1 0.1 -7" scale="0.25 0.25 0.25" rotation="0 260 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#buck-glb" position="-5 0.1 1" scale="0.15 0.15 0.15" rotation="0 120 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#doe-glb" position="-7 0.1 -5" scale="0.15 0.15 0.15" rotation="0 30 0" shadow="cast: true"></a-gltf-model>
+      <a-gltf-model src="#bear-glb" position="7 0.1 -5" scale="0.2 0.2 0.2" rotation="0 330 0" shadow="cast: true"></a-gltf-model>
 
-      <!-- <a-obj-model src="#sled-obj" mtl="#sled-mtl" position="4 0.1 -5" scale="2 2 2" rotation="0 45 0" shadow="cast: true"></a-obj-model> -->
+      <a-entity position="0 10 -15" particle-system="preset: snow; particleCount: 5000;"></a-entity>
 
       <a-entity id="lights"
-            gltf-model="#lights-gltf"
+            gltf-model="#lights-glb"
             emissive-bulbs="color: #fa00af"
             position="0 4.3 -5.75" scale="1 1 1" rotation="0 45 0">
       </a-entity>
 
       <a-entity id="lights2"
-            gltf-model="#lights-gltf"
+            gltf-model="#lights-glb"
             emissive-bulbs="color: #f5c725"
             position="-0.25 4 -3.75" scale="1 1 1" rotation="0 150 0">
+      </a-entity>
+
+      <a-entity id="lights3"
+            gltf-model="#lights-glb"
+            emissive-bulbs="color: #14de94"
+            position="0 2.5 1.43" scale=".5 .5 .5" rotation="0 0 0">
       </a-entity>
       
       <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
@@ -115,14 +197,24 @@
       </a-entity>
 
       <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
-          position="4.996 1 -7"
+          position="-2.2 1.89 -10.2"
+          animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
+      </a-entity>
+
+      <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
+          position="-2 1.67 -10"
+          animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
+      </a-entity>
+
+        <a-entity light="type: point; color: #ff6600; intensity: 2; distance: 10; decay: 2" 
+          position="1.5 1.5 3.75"
           animation="property: light.intensity; from: 1.5; to: 2.5; dur: 500; dir: alternate; loop: true">
       </a-entity>
 
     <a-entity
         light="type: directional; 
               color: #ccdfff; 
-              intensity: 2; 
+              intensity: 1; 
               castShadow: true;
               shadowCameraLeft: -50;
               shadowCameraRight: 50;
@@ -137,13 +229,14 @@
 
     <a-entity light="type: hemisphere; skyColor: #151b36; groundColor: #867596; intensity: 0.3"></a-entity>
     <a-entity light="type: ambient; color: #efb5ff; intensity: 1"></a-entity>
+
     </a-scene>
 
     <script>
       AFRAME.registerComponent('emissive-bulbs', {
         schema: {
-          color: { type: 'color', default: '#FFD45A' }, // default bulb color
-          intensity: { type: 'number', default: 3.0 }   // emissive intensity
+          color: { type: 'color', default: '#FFD45A' },
+          intensity: { type: 'number', default: 3.0 } 
         },
 
         init() {
@@ -154,12 +247,9 @@
 
               const name = node.material.name;
 
-              // Only target bulb materials
               if (name === "Light" || name === "Light_Tip") {
-                // Clone material so other instances aren't affected
                 node.material = node.material.clone();
 
-                // Set the emissive color to your chosen color
                 node.material.emissive = new THREE.Color(this.data.color);
                 node.material.emissiveIntensity = this.data.intensity;
                 node.material.needsUpdate = true;
@@ -170,6 +260,5 @@
       });
       
     </script>
-
-  </body>
+    <script src="forest_gen.js"></script>
 </html>

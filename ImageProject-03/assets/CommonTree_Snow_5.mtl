@@ -1,15 +1,5 @@
-# Blender MTL File: 'CommonTree_Snow_3.blend'
-# Material Count: 4
-
-newmtl DarkGreen
-Ns 96.078431
-Ka 1.000000 1.000000 1.000000
-Kd 0.106320 0.181672 0.073945
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 2
+# Blender MTL File: 'CommonTree_Snow_5.blend'
+# Material Count: 3
 
 newmtl Green
 Ns 96.078431
